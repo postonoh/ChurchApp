@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "SBf4zWwwUSzuxcoYTXLsAjWDIbbvMjMXJsneJQfyL6n3BBv4MIGEW2OtWlQ6M/YNKOiopTqt2M6j2kKsEWyqkw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\postonoh\\source\\repos\\ChurchApp\\ChurchApp\\ChurchApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\postonoh\\.nuget\\packages\\com.onesignal\\3.9.0\\com.onesignal.3.9.0.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\unity\\5.11.7\\unity.5.11.7.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\unity.abstractions\\5.11.1\\unity.abstractions.5.11.1.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\unity.servicelocation\\5.11.1\\unity.servicelocation.5.11.1.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\wordpresspcl\\1.7.1\\wordpresspcl.1.7.1.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+    "C:\\Users\\postonoh\\.nuget\\packages\\xamarin.forms\\4.7.0.968\\xamarin.forms.4.7.0.968.nupkg.sha512"
+  ],
+  "logs": []
+}

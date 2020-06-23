@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="ChurchApp.Views.AppShell.AppShellMaster"
+             BackgroundColor="DarkViolet"
+             Title="Master">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="MenuHeaderImage">ChurchApp.Assets.menuheader.png</x:String>
+
+            <DataTemplate x:Key="AppShellMenuItemDataTemplate">
+                <ViewCell>
+                    <StackLayout Padding="15,10"
+                                 HorizontalOptions="FillAndExpand">
+                        <Label Text="{Binding Title}"
+                               TextColor="White"
+                               VerticalOptions="FillAndExpand"
+                               VerticalTextAlignment="Center"
+                               FontSize="Medium" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="StartAndExpand"
+                 HorizontalOptions="StartAndExpand"
+                 BackgroundColor="White"
+                 Spacing="0">
+
+        <Grid BackgroundColor="#800080"
+              HeightRequest="32">
+            <Grid.IsVisible>
+                <OnPlatform x:TypeArguments="x:Boolean">
+                    <On Platform="iOS"
+                        Value="true" />
+                    <On Platform="Android"
+                        Value="false" />
+                </OnPlatform>
+            </Grid.IsVisible>
+        </Grid>
+
+
+        <Grid BackgroundColor="#800080">
+            <Grid.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS"
+                        Value="150" />
+                    <On Platform="Android"
+                        Value="150" />
+                </OnPlatform>
+            </Grid.HeightRequest>
+
+            <forms:CachedImage HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               Aspect="AspectFit"
+                               Margin="20"
+                               Source="{Binding Source={StaticResource MenuHeaderImage}, Converter={StaticResource ImageSourceConverter}}"
+                               FadeAnimationForCachedImages="True"
+                               DownsampleToViewSize="True"
+                               Grid.Row="0" />
+        </Grid>
+
+        <ListView x:Name="Primary"
+                  BackgroundColor="#800080"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  RowHeight="48"
+                  ItemsSource="{Binding PrimaryMenuItems}"
+                  ItemTemplate="{StaticResource AppShellMenuItemDataTemplate}" />    
+
+
+    </StackLayout>
+</ContentPage>

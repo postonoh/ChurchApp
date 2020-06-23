@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:extensions="clr-namespace:ChurchApp.Extensions"
+             xmlns:converters="clr-namespace:ChurchApp.Converters"
+             xmlns:effects="clr-namespace:ChurchApp.Effects;assembly=ChurchApp"
+             xmlns:viewmodel="clr-namespace:ChurchApp.ViewModels"
+             x:Class="ChurchApp.Views.LoginPage"
+             BackgroundColor="DarkViolet"
+             Title="{extensions:Translate LoginPageTitle}">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CurrentUserToIsVisibleConverter x:Key="CurrentUserToIsVisibleConverter" />
+            <converters:BooleanToColorConverter x:Key="ColorConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+      <ContentPage.Content >
+        <ScrollView HorizontalOptions="Center">
+            <ScrollView.VerticalOptions > 
+                <OnIdiom
+                    x:TypeArguments="LayoutOptions"
+                    Default="CenterAndExpand"
+                    Phone="FillAndExpand" />
+            </ScrollView.VerticalOptions>
+
+            <StackLayout Margin="20,32"
+                Spacing="0"
+                VerticalOptions="FillAndExpand"
+                WidthRequest="350">
+            <Grid RowSpacing="20" VerticalOptions="CenterAndExpand" >
+             
+                    <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+                    <Entry Placeholder="{extensions:Translate LoginPageUsernamePlaceholder}"
+                        Grid.Row="1"
+                        HeightRequest="50"
+                        VerticalOptions="Start"                        
+                        BackgroundColor="White" effects:RoundCornersEffect.CornerRadius="8"
+                       Text="{Binding UserName}" />
+
+
+                    <Entry Placeholder="{extensions:Translate LoginPagePasswordPlaceholder}"
+                         Grid.Row="2"
+                         HeightRequest="50"
+                         VerticalOptions="Start"
+                         BackgroundColor="White" 
+                       Text="{Binding Password}"
+                       IsPassword="True" />
+
+                    <Button
+                         BorderColor="black" 
+                         BorderWidth="1" 
+                         HeightRequest="50"
+                         VerticalOptions="Start"
+                         Grid.Row="3"
+                         BorderRadius="9"
+                         BackgroundColor="White" 
+                         Text="{extensions:Translate LoginPageLoginButton}"
+                         Command="{Binding LoginCommand}"></Button>
+
+                    <StackLayout x:Name="LoginLayout"
+                         IsVisible="{Binding CurrentUser, Converter={StaticResource CurrentUserToIsVisibleConverter}}">               
+
+                 
+            </StackLayout>          
+        </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
