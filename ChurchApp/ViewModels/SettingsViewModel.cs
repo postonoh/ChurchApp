@@ -95,8 +95,10 @@ namespace ChurchApp.ViewModels
 
             var user = await _wordPressService.LoginAsync(userName, password);
             if (user != null)
-                CurrentUser = user;           
-
+            {
+                CurrentUser = user;
+                IsLoggingIn = true;
+            }
         }
          
         public async void Login()
@@ -112,7 +114,6 @@ namespace ChurchApp.ViewModels
                     CurrentUser = user;
                     IsLoggingIn = true;
                     Application.Current.MainPage = new AppShellPage();
-
                 }
                 else
                 {

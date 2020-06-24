@@ -4,12 +4,72 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ChurchApp.Views.CouplesPage">
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:ChurchApp.Controls"
+             xmlns:converters="clr-namespace:ChurchApp.Converters"
+             xmlns:extensions="clr-namespace:ChurchApp.Extensions" xmlns:behaviors="clr-namespace:ChurchApp.Behaviors"
+            
+             x:Class="ChurchApp.Views.CouplesPage" Title="Couples Ministry">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FeaturedImageConverter x:Key="FeaturedImageConverter"/>
+            <converters:HtmlConverter x:Key="HtmlConverter"/>
+            <converters:ImageResourceConverter x:Key="ImageResourceConverter"/>
+            <converters:SelectedItemConverter x:Key="SelectedItemConverter"/>
+
+            <x:String x:Key="PlaceholderImage">ChurchApp.Assets.placeholder.jpg</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <controls:IncrementalListView ItemsSource="{Binding Posts}"
+                                          SeparatorVisibility="None"
+                                          HasUnevenRows="True"
+                                          IsPullToRefreshEnabled="True"                  
+                                          RefreshCommand="{Binding LoadPostsAsyncCommand}"
+                                          IsRefreshing="{Binding IsRefreshing, Mode=OneWay}">
+                <controls:IncrementalListView.Behaviors>
+                    <behaviors:EventToCommandBehavior EventName="ItemSelected" Command="{Binding SelectPostCommand}" Converter="{StaticResource SelectedItemConverter}" />
+                </controls:IncrementalListView.Behaviors>
+                <controls:IncrementalListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="White" Margin="10,5">
+                                <Grid Margin="6">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <forms:CachedImage HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                                   HeightRequest="200"         
+                                                   DownsampleToViewSize="true"
+                                                   Source = "{Binding Embedded, Converter={StaticResource FeaturedImageConverter}}"
+                                                   Aspect="AspectFill"
+                                                   LoadingPlaceholder="{Binding ., Source={StaticResource PlaceholderImage}, Converter={StaticResource ImageResourceConverter}}"
+                                                   FadeAnimationEnabled="True">
+                                    </forms:CachedImage>
+
+                                    <Label Text="{Binding Title.Rendered, Converter={StaticResource HtmlConverter}}"
+                                       FontSize="Medium" FontAttributes="Bold" Grid.Row="1" />
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:IncrementalListView.ItemTemplate>
+            </controls:IncrementalListView>
+
+            <Label Text="{extensions:Translate NewsOverviewPageNoPostsLabel}"
+                   IsVisible="{Binding ArePostsNotAvailable}"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Margin="12"
+                   FontAttributes="Italic"/>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

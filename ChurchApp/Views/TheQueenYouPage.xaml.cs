@@ -14,5 +14,14 @@ namespace ChurchApp.Views
             InitializeComponent();
             BindingContext = ServiceLocator.Current.GetInstance<QueenViewModel>();
         }
+
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await ServiceLocator.Current.GetInstance<QueenViewModel>().LoadPostsAsyncCommand.ExecuteAsync();
+
+        }
     }
 }

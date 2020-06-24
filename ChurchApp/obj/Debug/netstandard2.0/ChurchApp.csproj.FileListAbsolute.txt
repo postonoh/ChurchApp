@@ -1,3 +1,8 @@
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.deps.json
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.dll
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ref\ChurchApp.dll
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.pdb
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.csprojAssemblyReference.cache
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.Resources.AppResources.resources
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.csproj.GenerateResource.cache
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -17,12 +22,7 @@ C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\View
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.AssemblyInfoInputs.cache
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.AssemblyInfo.cs
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.csproj.CoreCompileInputs.cache
+C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.dll
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ref\ChurchApp.dll
 C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.pdb
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.deps.json
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.dll
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ref\ChurchApp.dll
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\bin\Debug\netstandard2.0\ChurchApp.pdb
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\postonoh\source\repos\ChurchApp\ChurchApp\obj\Debug\netstandard2.0\ChurchApp.csprojAssemblyReference.cache

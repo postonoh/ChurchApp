@@ -25,12 +25,15 @@ background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 declare-styleable;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\52\jl\res\values\attrs.xml
+exclude;obj\Debug\90\res\xml\auto_backup_rules.xml
 external-cache-path;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\52\jl\res\layout\bottomtablayout.xml
+full-backup-content;obj\Debug\90\res\xml\auto_backup_rules.xml
 ImageView;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\4\jl\res\layout\onesignal_bgimage_notif_layout.xml
+include;obj\Debug\90\res\xml\auto_backup_rules.xml
 item;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\52\jl\res\values\styles.xml
 item;obj\Debug\90\res\values\styles.xml
 LinearLayout;C:\Users\postonoh\source\repos\ChurchApp\ChurchApp.Android\obj\Debug\90\lp\4\jl\res\layout\onesignal_bgimage_notif_layout.xml

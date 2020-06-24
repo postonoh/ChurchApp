@@ -20,7 +20,6 @@
             <converters:HtmlConverter x:Key="HtmlConverter"/>
             <converters:ImageResourceConverter x:Key="ImageResourceConverter"/>
             <converters:SelectedItemConverter x:Key="SelectedItemConverter"/>
-
             <x:String x:Key="PlaceholderImage">ChurchApp.Assets.placeholder.jpg</x:String>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -50,8 +49,7 @@
                                                    HeightRequest="200"         
                                                    DownsampleToViewSize="true"
                                                    Source = "{Binding Embedded, Converter={StaticResource FeaturedImageConverter}}"
-                                                   Aspect="AspectFill"
-                                                   LoadingPlaceholder="{Binding ., Source={StaticResource PlaceholderImage}, Converter={StaticResource ImageResourceConverter}}"
+                                                   Aspect="AspectFill"                                                   
                                                    FadeAnimationEnabled="True">
                                     </forms:CachedImage>
 

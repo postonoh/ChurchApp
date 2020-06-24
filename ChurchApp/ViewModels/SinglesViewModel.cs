@@ -88,7 +88,7 @@ namespace ChurchApp.ViewModels
 
                 Posts.Clear();
 
-                var posts = (await _wordpressService.GetPostByCategoryAsync(48)).ToObservableCollection();
+                var posts = (await _wordpressService.GetPostByCategoryAsync(50)).ToObservableCollection();
                 HasMoreItems = posts.Count == PageSize;
 
                 Posts.AddRange(posts);
@@ -104,7 +104,6 @@ namespace ChurchApp.ViewModels
                 IsRefreshing = false;
             }
         }
-
 
         private async Task PostCommentAsync()
         {
